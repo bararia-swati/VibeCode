@@ -1,0 +1,312 @@
+:root {
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --secondary-color: #2ecc71;
+  --secondary-dark: #27ae60;
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --light-gray: #e0e0e0;
+  --gray: #95a5a6;
+  --dark-gray: #7f8c8d;
+  --red: #e74c3c;
+  --red-dark: #c0392b;
+  --blue: #3498db;
+  --blue-dark: #2980b9;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+.app-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* Main content */
+.app-main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+/* Footer */
+.app-footer {
+  background-color: var(--light-gray);
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* Notes List */
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.note-card h3 {
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.note-excerpt {
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.note-date {
+  color: var(--gray);
+}
+
+.note-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.no-notes {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--gray);
+}
+
+/* Note Detail */
+.note-detail {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.note-detail .note-header {
+  margin-bottom: 1.5rem;
+}
+
+.note-detail h2 {
+  color: var(--primary-color);
+}
+
+.note-content {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  white-space: pre-wrap;
+}
+
+/* Forms */
+.note-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.note-form-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.note-form {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Buttons */
+.btn-create,
+.btn-save,
+.btn-edit,
+.btn-view,
+.btn-delete,
+.btn-back,
+.btn-cancel {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-create,
+.btn-save {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-create:hover,
+.btn-save:hover {
+  background-color: var(--secondary-dark);
+}
+
+.btn-edit,
+.btn-view {
+  background-color: var(--blue);
+  color: white;
+}
+
+.btn-edit:hover,
+.btn-view:hover {
+  background-color: var(--blue-dark);
+}
+
+.btn-delete {
+  background-color: var(--red);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: var(--red-dark);
+}
+
+.btn-back,
+.btn-cancel {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.btn-back:hover,
+.btn-cancel:hover {
+  background-color: var(--gray);
+  color: white;
+}
+
+/* Loading and Error states */
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.loading {
+  color: var(--gray);
+}
+
+.error {
+  color: var(--red);
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
