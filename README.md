@@ -1,6 +1,6 @@
-# Note Taking App
+# Notes App
 
-A simple note taking application with a React frontend and Express + PostgreSQL backend.
+A full-stack notes application with a React frontend and Express backend.
 
 ## Features
 
@@ -40,27 +40,53 @@ CREATE TABLE notes (
 );
 ```
 
-## Installation and Setup
+## Project Structure
 
-1. Clone the repository:
+This project is organized into two main directories:
 
-```bash
-git clone https://github.com/yourusername/note-taking-app.git
-cd note-taking-app
+- `server/` - Backend Express.js API with SQLite database
+- `client/` - Frontend React application
+
+## Backend (server/)
+
+The backend is a RESTful API built with Express.js that uses SQLite for data storage.
+
+### Key Files:
+- `index.js` - Main server entry point
+- `db.js` - Database connection and query interface
+- `config.js` - Server configuration
+- `database.sql` - SQL schema definition
+
+### API Endpoints:
+- `GET /api/notes` - Get all notes
+- `GET /api/notes/:id` - Get a specific note
+- `POST /api/notes` - Create a new note
+- `PUT /api/notes/:id` - Update a note
+- `DELETE /api/notes/:id` - Delete a note
+
+## Frontend (client/)
+
+The frontend is a React application built with Vite.
+
+### Key Files:
+- `src/` - React components and application code
+- `index.html` - HTML entry point
+- `vite.config.js` - Vite configuration
+
+## Getting Started
+
+### Running the Backend:
 ```
-
-2. Install dependencies for the server:
-
-```bash
 cd server
 npm install
+npm start
 ```
 
-3. Install dependencies for the client:
-
-```bash
-cd ../client
+### Running the Frontend:
+```
+cd client
 npm install
+npm run dev
 ```
 
 ## Configuration
@@ -80,21 +106,7 @@ module.exports = {
 };
 ```
 
-## Running the Application
-
-1. Start the server:
-
-```bash
-cd server
-npm run dev
-```
-
-2. Start the client:
-
-```bash
-cd ../client
-npm run dev
-```
+## Accessing the Application
 
 3. Access the application at http://localhost:5173
 
