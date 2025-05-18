@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Use environment variable with fallback to localhost for development
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+// Use relative URL which will be handled by Vercel's proxy
+const API_URL = '/api';
 
 export const api = {
   // Get all notes

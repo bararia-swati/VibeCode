@@ -1,0 +1,15 @@
+aws_region  = "us-east-1"
+app_name    = "notes-app"
+environment = "dev"
+
+# Database credentials (sensitive - do not commit with real values)
+db_username = "appuser"
+db_password = "YourStrongPasswordHere"
+
+# EC2 configuration
+ami_id      = "ami-0e8a35301867bfe5c"  # Amazon Linux 2023 AMI in us-east-1
+key_name    = "your-key-pair-name"  # Your SSH key pair name
+server_port = 3000
+
+# Security
+ssh_cidr    = "0.0.0.0/0"  # Restrict to your IP in production 
