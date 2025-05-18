@@ -1,5 +1,5 @@
 module.exports = {
-  PORT: process.env.PORT || 5001,
+  PORT: process.env.PORT || 3000,
   db: {
     user: process.env.PG_USER || 'sk',
     password: process.env.PG_PASSWORD || '',  // Empty password for now
